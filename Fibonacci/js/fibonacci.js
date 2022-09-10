@@ -1,9 +1,10 @@
 const xValue = document.getElementById("x-value");
 const yValue = document.getElementById("y-value");
+const submitBtn = document.getElementById("submitBtn");
 
-let fibOf = 8;
-
-xValue.innerText = fibOf;
+submitBtn.addEventListener('click', () => {
+    fibonacci(xValue.value);
+});
 
 function fibonacci(number) {
     
@@ -16,10 +17,5 @@ function fibonacci(number) {
         n1 = n2;
         n2 = tmp;
     }
-
-    return n1;
+    yValue.innerText = n1;
 }
-
-let result = fibonacci(fibOf);
-
-yValue.innerText = result;
