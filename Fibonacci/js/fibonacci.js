@@ -1,20 +1,17 @@
 const xValue = document.getElementById("x-value");
 const yValue = document.getElementById("y-value");
-const submitBtn = document.getElementById("submitBtn");
+const fiboForm = document.getElementById("fiboForm");
 
-submitBtn.addEventListener('click', () => {
-    var result = 0;
-    for(let i = 0; i <= xValue.value; i++) {
-        result = fibonacci(i);
-    }
-    yValue.innerText = result;
+fiboForm.addEventListener('submit', (event) => {
+
+    event.preventDefault();
+
+    let fetchURL = 'http://localhost:5050/fibonacci/' + xValue.value;
+
+    fetch(fetchURL).then(response => {
+        response.json().then(data => {
+            yValue.innerText = data.result;
+        });
+    });
+
 });
-
-function fibonacci(number) {
-    if(number < 2) {
-        return number;
-    }
-    else {
-        return fibonacci(number-1) + fibonacci(number - 2);
-    }
-}
