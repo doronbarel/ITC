@@ -18,3 +18,30 @@
     top: 50px;
     left: 50px;
 }
+
+.loader {
+    border: 3px solid #FFFFFF;
+    border-radius: 50%;
+    border-top: 3px solid #000000;
+    display: none;
+    width: 25px;
+    height: 25px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  #formAlert {
+    padding: 5px;
+    display: none;
+    width: fit-content;
+    position: absolute;
+    left: 40px;
+  }
+
+  .invalidInput {
+    border: 1px solid #D9534F;
+  }

@@ -13,8 +13,9 @@
         <h1>Fibonacci Calculator</h1>
         <form id="fiboForm">
             <span>The Fibonacci of </span><input type="text" placeholder="#" id="x-value"/>
-            <button type="submit" class="btn btn-primary" id="submitBtn">Is</button><span id="y-value"></span>
+            <button type="submit" class="btn btn-primary" id="submitBtn">Is</button><span id="y-value"></span><span class="loader" id="loadingWheel"></span>
         </form>
+        <div class="alert alert-danger" role="alert" id="formAlert">Can't be larger than 50</div>
     </div>
     <script src="js/fibonacci.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
